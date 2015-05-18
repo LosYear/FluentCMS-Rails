@@ -1,0 +1,11 @@
+<%= semantic_form_for @menu_model, url: @menu_model.persisted? ? admin_menu_path(@menu_model) : admin_menus_path(@menu_model),
+                      as: :menu, html: {:class => "form-horizontal"} do |f| %>
+  <%= f.semantic_errors %>
+  <%= f.inputs %>
+  <%= f.actions :class => 'form-group' do %>
+    <div class="col-lg-offset-2 col-lg-8">
+      <%= f.action :submit %>
+      <%= f.action :cancel %>
+    </div>
+  <% end %>
+<% end %>
