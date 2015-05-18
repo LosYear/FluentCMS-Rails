@@ -5,7 +5,7 @@ require "fluent/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "Fluent CMS"
+  s.name        = "fluent"
   s.version     = Fluent::VERSION
   s.authors     = ["LosYear"]
   s.email       = ["losevyaroslav@gmail.com"]
