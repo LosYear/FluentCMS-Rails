@@ -17,3 +17,5 @@ require 'devise'
 require 'cancan'
 
 require 'rails-settings-cached'
+
+require 'i18n-js'

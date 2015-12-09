@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["LosYear"]
   s.email       = ["losevyaroslav@gmail.com"]
   s.homepage    = "https://github.com/LosYear/FluenCMS-Rails"
-  #s.summary     = "TODO: Summary of Fluent."
+  s.summary     = "Fluent CMS mountable"
   s.description = "Mountable engine written in Ruby on Rails which provides basic CMS functional"
   s.license     = "MIT"
 
@@ -36,9 +36,10 @@ Gem::Specification.new do |s|
   # Assets processing
   s.add_dependency "uglifier", '>= 1.3.0'
   s.add_dependency "sass-rails"
-  s.add_dependency "coffee-rails", '~> 4.0.0'
+  s.add_dependency "coffee-rails"
 
   # Etc
+  s.add_dependency "i18n-js", '>= 3.0.0.rc11'
   s.add_dependency "wiselinks"
   s.add_dependency "friendly_id"
   s.add_dependency "rails-settings-cached"
