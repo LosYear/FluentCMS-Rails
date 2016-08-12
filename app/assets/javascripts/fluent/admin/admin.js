@@ -4,6 +4,7 @@
 //= require fluent/admin/global
 //= require fluent/admin/menu_admin.js.coffee
 //= require ckeditor/init
+//= require fluent/admin/ckeditor
 
 NProgress.configure({ showSpinner: false });
 $(document).on('page:load', function () {

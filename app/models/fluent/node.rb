@@ -4,7 +4,7 @@ module Fluent
     friendly_id :slug
 
     # Relations
-    belongs_to :aurhor, :foreign_key => "author", :class_name => "User"
+    belongs_to :author, :foreign_key => "author", :class_name => "User"
     belongs_to :updater, :foreign_key => "updater", :class_name => "User"
 
     # Validation

@@ -11,7 +11,7 @@ module Fluent
       self.where('name LIKE :search', search: query)
     end
 
-    column(:name, :header => I18n.t('activerecord.attributes.role.name'), :html => true) do |record|
+    column(:name, :header => I18n.t('activerecord.attributes.fluent/role.name'), :html => true) do |record|
       link_to record.name, edit_admin_role_path(record), :data => {:push => true}
     end
     column(:actions, :html => true, :header => I18n.t('backend_part.actions')) do |record|

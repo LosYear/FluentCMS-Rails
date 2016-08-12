@@ -24,8 +24,8 @@ Gem::Specification.new do |s|
   # Assets
   s.add_dependency "font-awesome-rails"
   s.add_dependency "bootstrap-sass"
-  s.add_dependency "formtastic", "~> 2.3.0.rc2"
-  s.add_dependency "formtastic-bootstrap", "~> 3.0.0.rc.2"
+  s.add_dependency "formtastic", "~> 3.1"
+  s.add_dependency "formtastic-bootstrap", "~> 3.1", ">= 3.1.1"
   s.add_dependency "jquery-rails"
   s.add_dependency "datagrid"
   s.add_dependency "ckeditor"

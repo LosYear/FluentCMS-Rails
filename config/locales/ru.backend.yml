@@ -65,48 +65,50 @@ ru:
 
   activerecord:
     attributes:
-      user:
+      fluent/user:
         email: "Email"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
         username: "Имя пользователя"
-      role:
+        created_at: "Зарегистрирован"
+      fluent/role:
         name: "Имя"
-      page:
+      fluent/page:
         title: "Заголовок"
         slug: "URL"
         content: "Содержимое"
         status: "Опубликовано?"
-      news:
+      fluent/news:
         title: "Заголовок"
         slug: "URL"
         content: "Содержимое"
+        preview: "Краткое содержание"
         status: "Опубликовано?"
-      block:
+      fluent/block:
         title: "Заголовок"
         name: "Имя"
         content: "Содержимое"
         type: "Тип"
         status: "Опубликовано?"
-      menu:
+      fluent/menu:
         title: "Заголовок"
         name: "Имя"
         description: "Описание"
         status: "Опубликовано?"
-      menu_item:
+      fluent/menu_item:
         menu: "Меню"
         title: "Заголовок"
         url: "Ссылка"
         status: "Опубликовано?"
         parent_id: "Родитель"
         data_push: "Использовать Wiselinks?"
-      social:
+      fluent/social:
         title: "Заголовок"
         link: "Ссылка"
         order: "Порядок"
         status: "Опубликовано?"
         logo: "Изображение"
-      post:
+      fluent/post:
         title: "Заголовок"
         content: "Содержимое"
         slug: "URL"

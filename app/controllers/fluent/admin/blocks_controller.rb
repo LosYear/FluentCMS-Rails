@@ -3,9 +3,9 @@ module Fluent
   class Admin::BlocksController < Admin::AdminController
     # Loading model
     before_action :set_block, only: [:show, :edit, :update, :destroy]
-    
+
     def index
-      @blocks_grid = Datagrids::BlocksGrid.new(params[:datagrids_blocks_grid]) do |scope|
+      @blocks_grid = Fluent::Datagrids::BlocksGrid.new(params[:datagrids_blocks_grid]) do |scope|
         scope.page(params[:page])
       end
 

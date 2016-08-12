@@ -1,7 +1,7 @@
 module Fluent
   class Admin::UsersController < Admin::AdminController
     def index
-      @users_grid = Datagrids::UsersGrid.new(params[:datagrids_users_grid]) do |scope|
+      @users_grid = Fluent::Datagrids::UsersGrid.new(params[:datagrids_users_grid]) do |scope|
         scope.page(params[:page])
       end
 

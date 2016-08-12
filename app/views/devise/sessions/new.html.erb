@@ -3,11 +3,11 @@
       <h2 class="form-signin-heading"><%= t('user.sign_in') %></h2>
 
       <% unless flash.empty? %>
-          <div class="alert alert-danger">
-              <% flash.each do |name, msg| %>
+            <% flash.each do |name, msg| %>
+                <div class="alert alert-<%= (name == 'notice')? "info" : "danger" %>">
                   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+                </div>
               <% end %>
-          </div>
       <% end %>
 
       <%= f.email_field :email, :autofocus => true, :class => 'form-control', :placeholder => t('activerecord.attributes.user.email') %>

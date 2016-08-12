@@ -5,7 +5,7 @@ module Fluent
     before_action :set_page, only: [:show, :edit, :update, :destroy]
 
     def index
-      @pages_grid = Datagrids::PagesGrid.new(params[:datagrids_pages_grid]) do |scope|
+      @pages_grid = Fluent::Datagrids::PagesGrid.new(params[:datagrids_pages_grid]) do |scope|
         scope.page(params[:page])
       end
 
@@ -31,7 +31,7 @@ module Fluent
 
     def create
       @page = Page.new(page_params)
-      @page.author = current_user.id
+      @page.author = current_user
 
       respond_to do |format|
         if @page.save

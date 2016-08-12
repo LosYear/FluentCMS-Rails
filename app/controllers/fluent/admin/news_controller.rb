@@ -4,7 +4,7 @@ module Fluent
     before_action :set_news, only: [:show, :edit, :update, :destroy]
 
     def index
-      @news_grid = Datagrids::NewsGrid.new(params[:fluent_datagrids_news_grid]) do |scope|
+      @news_grid = Fluent::Datagrids::NewsGrid.new(params[:datagrids_news_grid]) do |scope|
         scope.page(params[:page])
       end
 
@@ -30,7 +30,7 @@ module Fluent
 
     def create
       @news = News.new(news_params)
-      @news.author = current_user.id
+      @news.author = current_user
 
       respond_to do |format|
         if @news.save
@@ -67,12 +67,12 @@ module Fluent
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_news
-        @news = News.friendly.find(params[:id])
+        @news = News.find(params[:id])
       end
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def news_params
-        params.require(:news).permit(:title, :slug, :content, :status)
+        params.require(:news).permit(:title, :preview, :content, :status)
       end
   end
 end

@@ -3,7 +3,7 @@
     <%= f.semantic_errors :slug, :title, :content %>
     <%= f.inputs do %>
         <%= f.input :title %>
-        <%= f.input :slug %>
+        <%= f.input :preview, :as => :ckeditor %>
         <%= f.input :content, :as => :ckeditor %>
         <%= f.input :status, :as => :boolean %>
     <% end %>
