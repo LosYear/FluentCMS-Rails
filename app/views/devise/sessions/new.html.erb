@@ -1,3 +1,5 @@
+<% title t('user.sign_in') %>
+
 <div class="container">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-signin'}) do |f| %>
       <h2 class="form-signin-heading"><%= t('user.sign_in') %></h2>
@@ -18,5 +20,7 @@
           </label>
       <% end -%>
       <%= f.submit t('user.sign_in'), :class => 'btn btn-lg btn-primary btn-block' %>
+	  
+	  <p style="margin-top: 10px"><%= link_to t('devise.passwords.forgot_password'), fluent.new_user_password_path, data: {push: true} %></a></p>
    <% end %>
 </div>
