@@ -17,6 +17,7 @@ en:
     manage_roles: "Manage roles"
     create_role: "Create role"
     actions: "Actions"
+    settings: "Settings"
   activerecord:
     errors:
       models:

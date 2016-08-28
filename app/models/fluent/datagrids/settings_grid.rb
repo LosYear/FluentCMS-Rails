@@ -11,7 +11,7 @@ module Fluent
       self.where('var LIKE :search', search: query)
     end
 
-    column(:var, :header => I18n.t('activerecord.attributes.fluent/setting.name'), :html => true) do |record|
+    column(:var, :header => I18n.t('activerecord.attributes.fluent/setting.var'), :html => true) do |record|
       link_to record.var, edit_admin_setting_path(record), :data => {:push => true}
     end
     column(:value, :header => I18n.t('activerecord.attributes.fluent/setting.value'))

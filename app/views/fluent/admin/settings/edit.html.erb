@@ -1,21 +1,21 @@
 <%
    # Defining breadcrumbs
    @breadcrumbs = [
-           {:link => admin_blocks_path, :title => t('backend_part.blocks')},
-           {:title => @block.name, :link => '#'},
+           {:link => admin_settings_path, :title => t('backend_part.settings')},
+           {:title => @setting.var, :link => '#'},
            {:title => t('backend_part.manage')}
    ]
 
    # Defining menu
    @menu = [
-           {:link => admin_blocks_path, :title => t('backend_part.manage_blocks'), :icon => 'list'},
-           {:link => new_admin_block_path, :title => t('backend_part.create_block'), :icon => 'file'},
+       {:link => admin_settings_path, :title => t('backend_part.manage_settings'), :icon => 'list'},
+       {:link => new_admin_setting_path, :title => t('backend_part.create_option'), :icon => 'file'},
    ]
 %>
 
 <div class="page-header">
-  <h1><%= t('backend_part.block') %>
-    <small>&nbsp;<%= @block.name %></small>
+  <h1><%= t('backend_part.option') %>
+    <small>&nbsp;<%= @setting.var %></small>
   </h1>
 </div>
 

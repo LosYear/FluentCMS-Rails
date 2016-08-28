@@ -63,6 +63,11 @@ ru:
       post: "Запись"
       tweet: "Твит"
 
+    settings: "Настройки"
+    manage_settings: "Управление"
+    create_option: "Создать"
+    option: "Ключ"
+
   activerecord:
     attributes:
       fluent/user:
@@ -115,6 +120,9 @@ ru:
         status: "Опубликовано?"
         preview: "Краткое содержание"
         type: "Тип"
+      fluent/setting:
+        var: "Имя"
+        value: "Значение"
     errors:
       models:
         role:

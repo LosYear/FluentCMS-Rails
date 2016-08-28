@@ -3,7 +3,7 @@ module Fluent
     before_action :set_setting, only: [:show, :edit, :update, :destroy]
 
     def index
-      @settings_grid = Datagrids::SettingsGrid.new(params[:datagrids_settings_grid]) do |scope|
+      @settings_grid = Fluent::Datagrids::SettingsGrid.new(params[:datagrids_settings_grid]) do |scope|
         scope.page(params[:page])
       end
 
