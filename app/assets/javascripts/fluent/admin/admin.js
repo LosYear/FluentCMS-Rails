@@ -12,5 +12,8 @@ $(document).on('page:load', function () {
 });
 
 $(document).ready(function () {
-    window.wiselinks = new Wiselinks($('.content'));
+    is_Firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    if(!is_Firefox) {
+        window.wiselinks = new Wiselinks($('.content'));
+    }
 })
