@@ -18,34 +18,34 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.1"
-  s.add_dependency "devise"
-  s.add_dependency "cancan"
+  s.add_dependency "devise", "~> 4.2"
+  s.add_dependency "cancan", "~> 1.6"
 
   # Assets
   s.add_dependency "font-awesome-rails"
-  s.add_dependency "bootstrap-sass"
+  s.add_dependency "bootstrap-sass", "~> 3.3"
   s.add_dependency "formtastic", "~> 3.1"
   s.add_dependency "formtastic-bootstrap", "~> 3.1", ">= 3.1.1"
-  s.add_dependency "jquery-rails"
-  s.add_dependency "datagrid"
-  s.add_dependency "ckeditor"
-  s.add_dependency "paperclip"
-  s.add_dependency "nprogress-rails"
+  s.add_dependency "jquery-rails", "~> 4.2"
+  s.add_dependency "datagrid", "~> 1.4"
+  s.add_dependency "ckeditor", "~> 4.2"
+  s.add_dependency "paperclip", "~> 5.1"
+  s.add_dependency "nprogress-rails", "~> 0.2"
   #s.add_dependency "themes_on_rails", github: "LosYear/themes_on_rails"
 
   # Assets processing
   s.add_dependency "uglifier", '>= 1.3.0'
-  s.add_dependency "sass-rails"
-  s.add_dependency "coffee-rails"
+  s.add_dependency "sass-rails", "~> 5.0"
+  s.add_dependency "coffee-rails", "~> 4.1"
 
   # Etc
   s.add_dependency "i18n-js", '>= 3.0.0.rc11'
-  s.add_dependency "wiselinks"
-  s.add_dependency "friendly_id"
-  s.add_dependency "rails-settings-cached"
-  s.add_dependency "kaminari"
-  s.add_dependency "will_paginate"
-  s.add_dependency "will_paginate-bootstrap"
+  s.add_dependency "wiselinks", "~> 1.2"
+  s.add_dependency "friendly_id", "~> 5.1"
+  s.add_dependency "rails-settings-cached", "~> 0.6"
+  s.add_dependency "kaminari", "~> 0.17"
+  s.add_dependency "will_paginate", "~> 3.1"
+  s.add_dependency "will_paginate-bootstrap", "~> 1.0"
   #s.add_dependency "jquery-datatables-rails", github: 'rweng/jquery-datatables-rails'
 
 
