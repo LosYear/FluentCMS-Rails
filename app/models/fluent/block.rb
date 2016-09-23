@@ -1,5 +1,5 @@
 module Fluent
-  class Block < ActiveRecord::Base
+  class Block < ApplicationRecord
     extend FriendlyId
     friendly_id :name
 

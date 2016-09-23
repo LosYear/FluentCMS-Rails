@@ -7,7 +7,7 @@ module Fluent
       'fluent/admin_partial'
     end
 
-    before_filter :authenticate_user!, :verify_admin
+    before_action :authenticate_user!, :verify_admin
 
     def verify_admin
       redirect_to root_url unless current_user.role?('admin')

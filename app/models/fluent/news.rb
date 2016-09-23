@@ -1,5 +1,5 @@
 module Fluent
-  class News < ActiveRecord::Base
+  class News < ApplicationRecord
     validates :title, presence: true
     validates :content, presence: true
     validates :preview, presence: true
