@@ -1,5 +1,5 @@
 module Fluent
-  class MenuItem < ActiveRecord::Base
+  class MenuItem < ApplicationRecord
     belongs_to :menu
     validates :menu_id, presence: true
     validates :title, presence: true

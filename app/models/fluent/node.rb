@@ -1,5 +1,5 @@
 module Fluent
-  class Node < ActiveRecord::Base
+  class Node < ApplicationRecord
     extend FriendlyId
     friendly_id :slug
 

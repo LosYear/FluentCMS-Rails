@@ -1,5 +1,5 @@
 module Fluent
-  class Menu < ActiveRecord::Base
+  class Menu < ApplicationRecord
     has_many :menu_items, -> {order('`order` ASC')}, dependent: :destroy
 
     @_tree = Hash.new
