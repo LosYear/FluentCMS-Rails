@@ -22,7 +22,7 @@ module Fluent
     column(:description, :header => I18n.t('activerecord.attributes.fluent/menu.description'))
     column(:actions, :html => true, :header => I18n.t('backend_part.actions')) do |record|
       link_to(icon('pencil'), admin_menu_items_path(:menu_id => record.id), 'data-original-title' => t('backend_part.edit'), 'id' => 'tooltip', :data => {:push => true}) +
-      link_to(icon('trash'), admin_menu_path(record), 'data-original-title' => t('backend_part.remove'), 'id' => 'tooltip',  :method => :delete, :confirm => "#{t("backend_part.confirm")}", :data => {:push => true})
+      link_to(icon('trash'), admin_menu_path(record), 'data-original-title' => t('backend_part.remove'), 'id' => 'tooltip',  :method => :delete, :confirm => "#{t("backend_part.confirm")}")
     end
   end
 end

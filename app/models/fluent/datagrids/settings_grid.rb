@@ -17,7 +17,7 @@ module Fluent
     column(:value, :header => I18n.t('activerecord.attributes.fluent/setting.value'))
     column(:actions, :html => true, :header => I18n.t('backend_part.actions')) do |record|
       link_to(icon('pencil'), edit_admin_setting_path(record), 'data-original-title' => t('backend_part.edit'), 'id' => 'tooltip', :data => {:push => true}) +
-      link_to(icon('trash'), admin_setting_path(record), 'data-original-title' => t('backend_part.remove'), 'id' => 'tooltip',  :method => :delete, :confirm => "#{t("backend_part.confirm")}", :data => {:push => true})
+      link_to(icon('trash'), admin_setting_path(record), 'data-original-title' => t('backend_part.remove'), 'id' => 'tooltip',  :method => :delete, :confirm => "#{t("backend_part.confirm")}")
     end
   end
 end
