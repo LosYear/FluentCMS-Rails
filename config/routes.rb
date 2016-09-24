@@ -18,7 +18,7 @@ Fluent::Engine.routes.draw do
   # Routes
   # Backend
   namespace :admin do
-    match '/' => 'blocks#index', via: :all
+    match '/' => 'dashboard#index', via: :all
     resources :pages
     resources :news
     resources :blocks

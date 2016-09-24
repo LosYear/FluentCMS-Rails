@@ -68,6 +68,10 @@ ru:
     create_option: "Создать"
     option: "Ключ"
 
+    dashboard: "Панель управления"
+    home: "Главная"
+    site: "Сайт"
+
   activerecord:
     attributes:
       fluent/user:

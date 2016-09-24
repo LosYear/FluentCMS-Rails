@@ -1,0 +1,19 @@
+<div class="page-header">
+  <h1><%= t('backend_part.dashboard') %>
+  </h1>
+</div>
+
+<div class="dashboard">
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-mint"><i class="fa fa-newspaper-o"></i></span>
+      <div class="info-box-content">
+        <div class="info-box-text" style="margin-bottom: 10px;"><%= t('backend_part.news') %></div>
+        <div>
+          <a href="<%= fluent.admin_news_index_url %>" data-push="true"><i class="fa fa-list" style="width:20px"></i>Управление</a><br>
+          <a href="<%= fluent.new_admin_news_url %>" data-push="true"><i class="fa fa-plus" style="width:20px"></i>Создать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
