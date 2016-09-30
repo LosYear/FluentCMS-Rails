@@ -13,6 +13,7 @@ gemspec
 gem 'jquery-datatables-rails', "~> 3.3", github: 'rweng/jquery-datatables-rails'
 
 group :test do
+  gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'

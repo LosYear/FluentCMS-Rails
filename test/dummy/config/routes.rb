@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-
-  root 'application#index', via: :all
-
   mount Fluent::Engine => "/"
+
+  match '/' => 'site#index', via: :all
 end
