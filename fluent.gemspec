@@ -20,13 +20,14 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 5.0"
   s.add_dependency "devise", "~> 4.2"
   s.add_dependency "cancan", "~> 1.6"
+  s.add_dependency "mysql2"
 
   # Assets
+  s.add_dependency "jquery-rails", "~> 4.2"
   s.add_dependency "font-awesome-rails"
   s.add_dependency "bootstrap-sass", "~> 3.3"
   s.add_dependency "formtastic", "~> 3.1"
   s.add_dependency "formtastic-bootstrap", "~> 3.1", ">= 3.1.1"
-  s.add_dependency "jquery-rails", "~> 4.2"
   s.add_dependency "datagrid", "~> 1.4"
   s.add_dependency "ckeditor", "~> 4.2"
   s.add_dependency "paperclip", "~> 5.1"
@@ -49,7 +50,6 @@ Gem::Specification.new do |s|
   #s.add_dependency "jquery-datatables-rails", github: 'rweng/jquery-datatables-rails'
 
 
-
-
+  # Development and testing
   s.add_development_dependency "sqlite3"
 end

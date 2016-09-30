@@ -4,6 +4,10 @@ require 'will_paginate-bootstrap'
 require 'font-awesome-rails'
 require 'datagrid'
 
+require 'jquery-rails'
+require 'bootstrap-sass'
+require 'jquery-datatables-rails'
+
 require 'formtastic'
 require 'formtastic-bootstrap'
 
