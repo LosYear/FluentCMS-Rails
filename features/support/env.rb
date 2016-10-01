@@ -59,3 +59,9 @@ end
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
+
+Before do
+  Fluent::Role.new(id: 1, name: "Admin").save
+  Fluent::Role.new(id: 2, name: "Registered").save
+  Fluent::Role.new(id: 3, name: "Guest").save
+end
