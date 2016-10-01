@@ -66,7 +66,7 @@ module Fluent
     private
     # Use callbacks to share common setup or constraints between actions.
     def set_block
-      @block = Block.friendly.find(params[:id])
+      @block = Block.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
