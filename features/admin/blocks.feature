@@ -12,7 +12,7 @@ Feature: Blocks management
   Scenario Outline: Block creation
     When Administrator visits 'Create block' page
       And Fills in the block form with <title>, <name>, <type>, <content>, <status>
-    Then Block should <error> be created
+    Then Block should (<error>) be created
 
     Examples:
       | title      | name       | type | content           | status | error |
@@ -24,7 +24,7 @@ Feature: Blocks management
     Given Existing block
     When Administrator visits 'Update block' page
       And Fills in the block form with <title>, <name>, <type>, <content>, <status>
-    Then Block should <error> be updated with following data: <title>, <name>, <type>, <content>, <status>
+    Then Block should (<error>) be updated with following data: <title>, <name>, <type>, <content>, <status>
 
     Examples:
       | title         | name     | type | content     | status | error |
@@ -37,3 +37,9 @@ Feature: Blocks management
     When Administrator visits 'Manage blocks' page
       And Clicks 'Delete block' button
     Then Block should be destroyed
+
+  Scenario: Block created within second try
+    When Administrator visits 'Create block' page
+      And Fills in the block form with , block_name, HTML, Content, true
+      And Fills in the block form with New title, block_name, HTML, Content, true
+    Then Block should (no) be created

@@ -12,11 +12,11 @@ And(/^Fills in the block form with (.*), (.*), (.*), (.*), (.*)$/) do |title, na
   click_button 'block_submit_action'
 end
 
-Then(/^Block should (.*) be created$/) do |error|
+Then(/^Block should \((.*)\) be created$/) do |error|
   if error == 'no'
     expect(page).not_to have_selector(".error")
 
-    unless Fluent::Block.count == 1
+    if Fluent::Block.count < 1
       fail("Block wasn't created properly")
     end
   else
@@ -42,7 +42,7 @@ When(/^Administrator visits 'Update block' page$/) do
   visit fluent.edit_admin_block_path(Fluent::Block.first)
 end
 
-Then(/^Block should (.*) be updated with following data: (.*), (.*), (.*), (.*), (.*)$/) do |error, title, name, type, content, status|
+Then(/^Block should \((.*)\) be updated with following data: (.*), (.*), (.*), (.*), (.*)$/) do |error, title, name, type, content, status|
   if error == 'no'
     expect(page).not_to have_selector(".error")
 
