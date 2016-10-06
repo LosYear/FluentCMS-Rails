@@ -1,8 +1,5 @@
 module Fluent
   class Node < ApplicationRecord
-    extend FriendlyId
-    friendly_id :slug
-
     # Relations
     belongs_to :author, :foreign_key => "author", :class_name => "User"
     belongs_to :updater, :foreign_key => "updater", :class_name => "User"
