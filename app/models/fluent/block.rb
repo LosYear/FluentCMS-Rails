@@ -1,8 +1,5 @@
 module Fluent
   class Block < ApplicationRecord
-    extend FriendlyId
-    friendly_id :name
-
     # Validation
     validates :name, presence: true, uniqueness: { case_sensitive: false }
     validates :title, presence: true

@@ -44,7 +44,7 @@ Fluent::Engine.routes.draw do
   get '*path(.:format)', to: Fluent::NodeRouter.new,
      constraints: lambda { |request|
       format_pos = request.path.index('.') || 0
-     Fluent::Node.where(slug: request.path[1..format_pos-1]).count > 0
+     Fluent::Node.where(slug: request.path[1..format_pos-1], status: true).count > 0
   }, format: {}
 
 end

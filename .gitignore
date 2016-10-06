@@ -35,3 +35,9 @@
 /.vagrant
 *.lock
 /cookbooks/
+
+# Ignore test app files
+/test/dummy/tmp
+/test/dummy/db/*.sqlite3
+/test/dummy/db/*.sqlite3-journal
+*.log

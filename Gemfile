@@ -10,6 +10,14 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
+gem 'jquery-datatables-rails', "~> 3.3", github: 'rweng/jquery-datatables-rails'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 

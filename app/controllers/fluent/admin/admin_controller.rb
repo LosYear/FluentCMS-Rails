@@ -10,7 +10,7 @@ module Fluent
     before_action :authenticate_user!, :verify_admin
 
     def verify_admin
-      redirect_to root_url unless current_user.role?('admin')
+      redirect_to main_app.fluent_path unless current_user.role?('admin')
     end
 
     def current_ability
